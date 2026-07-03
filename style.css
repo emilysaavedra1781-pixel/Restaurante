@@ -209,3 +209,70 @@ h1, h2, h3 {
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .hero { text-align: left; }
 }
+
+/* Estilos para las pestañas del menú dinámico
+   Copia y pega esto al final de tu style.css
+   (usa las mismas variables --morado, --oro, --crema que ya tienes en :root) */
+
+.menu-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tab-btn {
+  border: 1px solid var(--morado);
+  background: transparent;
+  color: var(--morado);
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.tab-btn:hover {
+  background: rgba(43, 19, 49, 0.08);
+  transform: translateY(-2px);
+}
+
+.tab-btn.active {
+  background: var(--morado);
+  color: var(--oro);
+  border-color: var(--morado);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.menu-dia-fecha {
+  font-family: 'Work Sans', sans-serif;
+  color: var(--morado-claro);
+  opacity: 0.75;
+  margin-bottom: 1.5rem;
+  text-transform: capitalize;
+  font-size: 0.95rem;
+}
+
+.semana-bloque {
+  margin-bottom: 2.5rem;
+}
+
+.semana-bloque h4 {
+  font-family: 'Fraunces', serif;
+  color: var(--morado);
+  text-transform: capitalize;
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  position: relative;
+  padding-bottom: 0.4rem;
+}
+
+.semana-bloque h4::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 36px; height: 3px;
+  background: var(--oro);
+}

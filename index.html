@@ -40,48 +40,23 @@
   </div>
 </header>
 
-<!-- MENU - GRID LAYOUT -->
+<!-- MENU - DINÁMICO DESDE JSON -->
 <section id="menu" class="section">
   <div class="container">
-    <h2 class="section-title">Menú de hoy</h2>
-    <div class="menu-grid">
+    <h2 class="section-title">Menú</h2>
 
-      <article class="menu-card">
-        <span class="menu-tag">Entrada</span>
-        <h3>Causa limeña</h3>
-        <p>Papa amarilla, palta y pollo deshilachado.</p>
-      </article>
+    <div class="menu-tabs" id="menuTabs">
+      <button class="tab-btn active" data-view="hoy">Hoy</button>
+      <button class="tab-btn" data-view="manana">Mañana</button>
+      <button class="tab-btn" data-view="pasado">Pasado mañana</button>
+      <button class="tab-btn" data-view="semana">Toda la semana</button>
+    </div>
 
-      <article class="menu-card">
-        <span class="menu-tag">Segundo</span>
-        <h3>Lomo saltado</h3>
-        <p>Lomo fino salteado con cebolla, tomate y papas fritas. Va con arroz.</p>
-      </article>
+    <p class="menu-dia-fecha" id="menuFecha"></p>
 
-      <article class="menu-card">
-        <span class="menu-tag">Segundo</span>
-        <h3>Ají de gallina</h3>
-        <p>Pollo deshilachado en crema de ají amarillo, con arroz y papa sancochada.</p>
-      </article>
-
-      <article class="menu-card">
-        <span class="menu-tag">Postre</span>
-        <h3>Mazamorra morada</h3>
-        <p>Dulce tradicional de maíz morado con frutas.</p>
-      </article>
-
-      <article class="menu-card">
-        <span class="menu-tag">Bebida</span>
-        <h3>Chicha morada</h3>
-        <p>Refresco de maíz morado, hecho en casa.</p>
-      </article>
-
-      <article class="menu-card menu-precio">
-        <span class="menu-tag">Precio</span>
-        <h3>S/ 12.00</h3>
-        <p>Menú completo: entrada + segundo + postre + bebida.</p>
-      </article>
-
+    <div id="menuContenido">
+      <!-- script.js llena esto dinámicamente -->
+      <p>Cargando menú...</p>
     </div>
   </div>
 </section>

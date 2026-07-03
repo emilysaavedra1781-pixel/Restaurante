@@ -1,0 +1,52 @@
+{
+  "restaurante": "Sazón Casera",
+  "moneda": "PEN",
+  "menu_semana": {
+    "lunes": {
+      "entrada": "Causa limeña",
+      "segundo": "Lomo saltado",
+      "postre": "Mazamorra morada",
+      "bebida": "Chicha morada",
+      "precio": 12.00
+    },
+    "martes": {
+      "entrada": "Papa a la huancaína",
+      "segundo": "Ají de gallina",
+      "postre": "Suspiro a la limeña",
+      "bebida": "Chicha morada",
+      "precio": 12.00
+    },
+    "miercoles": {
+      "entrada": "Causa limeña",
+      "segundo": "Seco de res con frejoles",
+      "postre": "Arroz con leche",
+      "bebida": "Jugo de maracuyá",
+      "precio": 12.00
+    },
+    "jueves": {
+      "entrada": "Ensalada rusa",
+      "segundo": "Tallarines verdes con bistec",
+      "postre": "Mazamorra morada",
+      "bebida": "Chicha morada",
+      "precio": 12.00
+    },
+    "viernes": {
+      "entrada": "Papa a la huancaína",
+      "segundo": "Arroz con pollo",
+      "postre": "Suspiro a la limeña",
+      "bebida": "Jugo de papaya",
+      "precio": 12.00
+    },
+    "sabado": {
+      "entrada": "Causa limeña",
+      "segundo": "Lomo saltado",
+      "postre": "Arroz con leche",
+      "bebida": "Chicha morada",
+      "precio": 12.00
+    },
+    "domingo": {
+      "cerrado": true,
+      "mensaje": "No atendemos los domingos"
+    }
+  }
+}
