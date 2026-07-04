@@ -3,149 +3,183 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sazón Casera | Menú Diario</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="style.css">
+<title>Saboré | Cocina Peruana</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="#inicio">Sazón Casera</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="nav">
-      <ul class="navbar-nav gap-3">
-        <li class="nav-item"><a class="nav-link" href="#menu">Menú</a></li>
-        <li class="nav-item"><a class="nav-link" href="#promos">Promociones</a></li>
-        <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
-        <li class="nav-item"><a class="nav-link" href="#ubicacion">Ubicación</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-      </ul>
+<header>
+  <div class="container header-inner">
+    <div class="logo">
+      <i class="fa-solid fa-leaf logo-leaf"></i>
+      <div>
+        <span>SABORÉ</span>
+        <small>COCINA PERUANA</small>
+      </div>
     </div>
-  </div>
-</nav>
-
-<!-- HERO -->
-<header id="inicio" class="hero d-flex align-items-center">
-  <div class="container">
-    <p class="eyebrow">Menú del día · Lunes a sábado</p>
-    <h1>Comida casera,<br>servida a tiempo.</h1>
-    <p class="hero-sub">Entrada, segundo, postre y refresco. Recién hecho, sin vueltas.</p>
-    <a href="#menu" class="btn btn-cta">Ver el menú de hoy</a>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">INICIO</a></li>
+        <li><a href="nosotros.html">NOSOTROS</a></li>
+        <li><a href="menu.html">MENÚ</a></li>
+        <li><a href="reservaciones.html">RESERVACIONES</a></li>
+        <li><a href="contacto.html">CONTACTO</a></li>
+      </ul>
+    </nav>
+    <a href="reservaciones.html" class="btn btn-orange">RESERVAR</a>
   </div>
 </header>
 
-<!-- MENU - DINÁMICO DESDE JSON -->
-<section id="menu" class="section">
-  <div class="container">
-    <h2 class="section-title">Menú</h2>
-
-    <div class="menu-tabs" id="menuTabs">
-      <button class="tab-btn active" data-view="hoy">Hoy</button>
-      <button class="tab-btn" data-view="manana">Mañana</button>
-      <button class="tab-btn" data-view="pasado">Pasado mañana</button>
-      <button class="tab-btn" data-view="semana">Toda la semana</button>
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <div class="eyebrow">BIENVENIDO A</div>
+      <h1>Sabor que<br>se queda contigo</h1>
+      <p>Disfruta de una experiencia gastronómica única con lo mejor de la cocina peruana: ingredientes frescos y sabores inolvidables.</p>
+      <a href="menu.html" class="btn btn-orange">VER MENÚ</a>
     </div>
-
-    <p class="menu-dia-fecha" id="menuFecha"></p>
-
-    <div id="menuContenido">
-      <!-- script.js llena esto dinámicamente -->
-      <p>Cargando menú...</p>
-    </div>
-  </div>
-</section>
-
-<!-- PROMOS - FLEXBOX -->
-<section id="promos" class="section section-alt">
-  <div class="container">
-    <h2 class="section-title">Promociones</h2>
-    <div class="promo-row">
-      <div class="promo-card">
-        <h3>2x1 en jugos</h3>
-        <p>Todos los martes, en la compra de cualquier menú.</p>
-      </div>
-      <div class="promo-card">
-        <h3>Menú + postre gratis</h3>
-        <p>Viernes de quincena, llevando el menú completo.</p>
-      </div>
-      <div class="promo-card">
-        <h3>Delivery sin recargo</h3>
-        <p>Pedidos dentro de 2 km a la redonda, mínimo 2 menús.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- GALERIA - GRID -->
-<section id="galeria" class="section">
-  <div class="container">
-    <h2 class="section-title">Galería</h2>
-    <div class="gallery-grid">
-      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=600')"></div>
-      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=600')"></div>
-      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600')"></div>
-      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600')"></div>
-    </div>
-  </div>
-</section>
-
-<!-- UBICACION -->
-<section id="ubicacion" class="section section-alt">
-  <div class="container">
-    <h2 class="section-title">Ubicación y horario</h2>
-    <div class="ubicacion-row">
-      <div class="ubicacion-info">
-        <p><strong>Dirección:</strong> Jr. Las Begonias 245, San Isidro, Lima</p>
-        <p><strong>Horario:</strong> Lunes a sábado, 12:00 pm – 4:00 pm</p>
-        <p><strong>Teléfono:</strong> +51 991 685 681</p>
-        <a class="btn btn-cta" href="https://wa.me/51991685681?text=Hola%2C%20quiero%20consultar%20por%20el%20men%C3%BA%20de%20hoy" target="_blank">Escribir por WhatsApp</a>
-      </div>
-      <div class="ubicacion-map">
-        <iframe
-          src="https://www.google.com/maps?q=San+Isidro,Lima,Peru&output=embed"
-          width="100%" height="320" style="border:0;" loading="lazy">
-        </iframe>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACTO -->
-<section id="contacto" class="section">
-  <div class="container">
-    <h2 class="section-title">Escríbenos</h2>
-    <form class="contact-form" action="mailto:contacto@sazoncasera.pe" method="post" enctype="text/plain">
-      <div class="row g-3">
-        <div class="col-md-6">
-          <input type="text" class="form-control" placeholder="Tu nombre" required>
+    <div class="hero-image">
+      <div class="hero-carousel">
+        <div class="hero-slide slide-1">
+          <img src="https://origin.cronosmedia.glr.pe/large/2023/09/05/lg_64f79f2894d02071770b0e72.jpg" alt="Ceviche Clásico">
         </div>
-        <div class="col-md-6">
-          <input type="email" class="form-control" placeholder="Tu correo" required>
+        <div class="hero-slide slide-2">
+          <img src="https://blog.viajesmachupicchu.travel/wp-content/uploads/2020/07/LOMO-SALTADO-7-1024x1024.jpg" alt="Lomo Saltado">
         </div>
-        <div class="col-12">
-          <textarea class="form-control" rows="4" placeholder="Tu mensaje" required></textarea>
-        </div>
-        <div class="col-12">
-          <button type="submit" class="btn btn-cta">Enviar mensaje</button>
+        <div class="hero-slide slide-3">
+          <img src="https://gourmet.iprospect.cl/wp-content/uploads/2016/09/Aji-gallina.jpg" alt="Ají de Gallina">
         </div>
       </div>
-    </form>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#f7f2ea" d="M0,40 C360,90 1080,-10 1440,40 L1440,80 L0,80 Z"></path></svg>
+</section>
+
+<section class="nosotros">
+  <div class="container nosotros-inner">
+    <div class="nosotros-img">
+      <img src="img/nosotros.png" alt="Interior del restaurante Saboré">
+    </div>
+    <div class="nosotros-content">
+      <div class="eyebrow" style="color:#c0622f;">NOSOTROS</div>
+      <h2>Pasión por la cocina peruana</h2>
+      <p>Somos un restaurante que combina la tradición de la gastronomía peruana con técnicas modernas, para ofrecer platos excepcionales en un ambiente acogedor.</p>
+      <a href="nosotros.html" class="btn btn-green">CONOCE MÁS</a>
+    </div>
   </div>
 </section>
 
-<footer class="footer">
+<section class="menu-section">
   <div class="container">
-    <p>© 2026 Sazón Casera · Menú diario hecho con cariño.</p>
+    <div class="eyebrow" style="color:#c0622f;">NUESTRO MENÚ</div>
+    <h2>Platos Destacados</h2>
+    <div class="menu-grid">
+
+      <div class="menu-card">
+        <div class="menu-card-body">
+          <img src="https://origin.cronosmedia.glr.pe/large/2023/09/05/lg_64f79f2894d02071770b0e72.jpg" alt="Ceviche Clásico">
+          <h3>Ceviche Clásico</h3>
+          <p>Pescado fresco marinado en limón, ají limo, cebolla morada y camote.</p>
+          <div class="price">S/ 38</div>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-body">
+          <img src="https://blog.viajesmachupicchu.travel/wp-content/uploads/2020/07/LOMO-SALTADO-7-1024x1024.jpg" alt="Lomo Saltado">
+          <h3>Lomo Saltado</h3>
+          <p>Trozos de res salteados con cebolla, tomate y papas fritas, al estilo criollo.</p>
+          <div class="price">S/ 42</div>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-body">
+          <img src="https://gourmet.iprospect.cl/wp-content/uploads/2016/09/Aji-gallina.jpg" alt="Ají de Gallina">
+          <h3>Ají de Gallina</h3>
+          <p>Pechuga deshilachada en cremosa salsa de ají amarillo, servida con arroz y aceituna.</p>
+          <div class="price">S/ 32</div>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-body">
+          <img src="https://www.paulinacocina.net/wp-content/uploads/2024/05/postre-suspiro-limeno-Paulina-Cocina-Recetas-Cocina-1722430354.jpg" alt="Suspiro a la Limeña">
+          <h3>Suspiro a la Limeña</h3>
+          <p>Manjar blanco cubierto con merengue al oporto y un toque de canela.</p>
+          <div class="price">S/ 18</div>
+        </div>
+      </div>
+
+    </div>
+    <div class="menu-cta">
+      <a href="menu.html" class="btn btn-outline">VER MENÚ COMPLETO</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container cta-inner">
+    <div class="cta-left">
+      <div class="cta-icon"><i class="fa-regular fa-calendar"></i></div>
+      <div>
+        <div class="eyebrow">RESERVA TU MESA</div>
+        <h3>Vive una experiencia inolvidable</h3>
+        <p>Reserva tu mesa y disfruta de una velada especial.</p>
+      </div>
+    </div>
+    <a href="reservaciones.html" class="btn btn-orange">RESERVAR AHORA</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="logo">
+        <i class="fa-solid fa-leaf logo-leaf"></i>
+        <div>
+          <span>SABORÉ</span>
+          <small>COCINA PERUANA</small>
+        </div>
+      </div>
+      <p>Sabores del Perú que cuentan historias, momentos que se recuerdan.</p>
+      <div class="socials">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Enlaces</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="menu.html">Menú</a></li>
+        <li><a href="reservaciones.html">Reservaciones</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <p><i class="fa-solid fa-location-dot"></i> Av. Larco 456<br>Miraflores, Lima</p><br>
+      <p><i class="fa-solid fa-phone"></i> +51 987 654 321</p><br>
+      <p><i class="fa-solid fa-envelope"></i> hola@saborerestaurante.com</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Horarios</h4>
+      <p>Lunes a Viernes<br>12:00 pm - 11:00 pm</p><br>
+      <p>Sábados y Domingos<br>11:00 am - 12:00 am</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Saboré Restaurante. Todos los derechos reservados.</p>
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="script.js"></script>
 </body>
 </html>
