@@ -6,7 +6,7 @@
 <title>Saboré | Cocina Peruana</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" href="estilos.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
@@ -30,7 +30,6 @@
     <a href="reservaciones.html" class="btn btn-orange">RESERVAR</a>
   </div>
 </header>
-
 <section class="hero">
   <div class="container hero-inner">
     <div class="hero-text">
@@ -55,7 +54,6 @@
   </div>
   <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#f7f2ea" d="M0,40 C360,90 1080,-10 1440,40 L1440,80 L0,80 Z"></path></svg>
 </section>
-
 <section class="nosotros">
   <div class="container nosotros-inner">
     <div class="nosotros-img">
@@ -69,13 +67,11 @@
     </div>
   </div>
 </section>
-
 <section class="menu-section">
   <div class="container">
     <div class="eyebrow" style="color:#c0622f;">NUESTRO MENÚ</div>
     <h2>Platos Destacados</h2>
     <div class="menu-grid">
-
       <div class="menu-card">
         <div class="menu-card-body">
           <img src="https://origin.cronosmedia.glr.pe/large/2023/09/05/lg_64f79f2894d02071770b0e72.jpg" alt="Ceviche Clásico">
@@ -84,7 +80,6 @@
           <div class="price">S/ 38</div>
         </div>
       </div>
-
       <div class="menu-card">
         <div class="menu-card-body">
           <img src="https://blog.viajesmachupicchu.travel/wp-content/uploads/2020/07/LOMO-SALTADO-7-1024x1024.jpg" alt="Lomo Saltado">
@@ -93,7 +88,6 @@
           <div class="price">S/ 42</div>
         </div>
       </div>
-
       <div class="menu-card">
         <div class="menu-card-body">
           <img src="https://gourmet.iprospect.cl/wp-content/uploads/2016/09/Aji-gallina.jpg" alt="Ají de Gallina">
@@ -102,7 +96,6 @@
           <div class="price">S/ 32</div>
         </div>
       </div>
-
       <div class="menu-card">
         <div class="menu-card-body">
           <img src="https://www.paulinacocina.net/wp-content/uploads/2024/05/postre-suspiro-limeno-Paulina-Cocina-Recetas-Cocina-1722430354.jpg" alt="Suspiro a la Limeña">
@@ -111,11 +104,27 @@
           <div class="price">S/ 18</div>
         </div>
       </div>
-
     </div>
     <div class="menu-cta">
       <a href="menu.html" class="btn btn-outline">VER MENÚ COMPLETO</a>
     </div>
+  </div>
+</section>
+
+<section class="menu-section-dinamico">
+  <div class="container">
+    <div class="eyebrow" style="color:#c0622f;">MENÚ DEL DÍA</div>
+    <h2>¿Qué comemos hoy?</h2>
+
+    <div class="menu-tabs">
+      <button class="tab-btn active" data-view="hoy">Hoy</button>
+      <button class="tab-btn" data-view="manana">Mañana</button>
+      <button class="tab-btn" data-view="pasado">Pasado mañana</button>
+      <button class="tab-btn" data-view="semana">Semana completa</button>
+    </div>
+
+    <p id="menuFecha" class="menu-dia-fecha"></p>
+    <div id="menuContenido"></div>
   </div>
 </section>
 
@@ -132,7 +141,6 @@
     <a href="reservaciones.html" class="btn btn-orange">RESERVAR AHORA</a>
   </div>
 </section>
-
 <footer>
   <div class="container footer-grid">
     <div class="footer-brand">
@@ -150,7 +158,6 @@
         <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
       </div>
     </div>
-
     <div class="footer-col">
       <h4>Enlaces</h4>
       <ul>
@@ -161,25 +168,22 @@
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </div>
-
     <div class="footer-col">
       <h4>Contacto</h4>
       <p><i class="fa-solid fa-location-dot"></i> Av. Larco 456<br>Miraflores, Lima</p><br>
       <p><i class="fa-solid fa-phone"></i> +51 987 654 321</p><br>
       <p><i class="fa-solid fa-envelope"></i> hola@saborerestaurante.com</p>
     </div>
-
     <div class="footer-col">
       <h4>Horarios</h4>
       <p>Lunes a Viernes<br>12:00 pm - 11:00 pm</p><br>
       <p>Sábados y Domingos<br>11:00 am - 12:00 am</p>
     </div>
   </div>
-
   <div class="footer-bottom">
     <p>© 2026 Saboré Restaurante. Todos los derechos reservados.</p>
   </div>
 </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
