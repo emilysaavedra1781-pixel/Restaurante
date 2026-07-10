@@ -1,6 +1,5 @@
 // script.js — Menú dinámico de Sazón Casera
 // Lee menu-semana.json y arma las tarjetas según la pestaña elegida.
-
 const DIAS = ['domingo', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'];
 const DIAS_LABEL = {
   domingo: 'Domingo',
@@ -11,9 +10,7 @@ const DIAS_LABEL = {
   viernes: 'Viernes',
   sabado: 'Sábado'
 };
-
 let menuSemana = null;
-
 // Carga el JSON una sola vez al abrir la página
 async function cargarMenu() {
   const contenedor = document.getElementById('menuContenido');
@@ -28,14 +25,12 @@ async function cargarMenu() {
     contenedor.innerHTML = '<p>No se pudo cargar el menú en este momento.</p>';
   }
 }
-
 // Devuelve la clave del día (lunes, martes...) y la fecha real, según un desplazamiento en días
 function obtenerDia(offset) {
   const fecha = new Date();
   fecha.setDate(fecha.getDate() + offset);
   return { key: DIAS[fecha.getDay()], fecha };
 }
-
 // Genera el HTML de una tarjeta individual
 function crearCard(tag, titulo) {
   return `
@@ -44,7 +39,6 @@ function crearCard(tag, titulo) {
       <h3>${titulo}</h3>
     </article>`;
 }
-
 // Genera el bloque completo de tarjetas para un día
 function renderDia(diaInfo) {
   if (!diaInfo || diaInfo.cerrado) {
@@ -59,34 +53,27 @@ function renderDia(diaInfo) {
       ${crearCard('Precio', 'S/ ' + diaInfo.precio.toFixed(2))}
     </div>`;
 }
-
 // Formatea una fecha en español, ej: "viernes, 3 de julio"
 function formatearFecha(fecha) {
   return fecha.toLocaleDateString('es-PE', { weekday: 'long', day: 'numeric', month: 'long' });
 }
-
 // Cambia lo que se muestra según la pestaña elegida
 function mostrarVista(vista) {
   const contenido = document.getElementById('menuContenido');
   const fechaTexto = document.getElementById('menuFecha');
-
   if (!menuSemana) return;
-
   if (vista === 'hoy') {
     const { key, fecha } = obtenerDia(0);
     fechaTexto.textContent = 'Hoy, ' + formatearFecha(fecha);
     contenido.innerHTML = renderDia(menuSemana[key]);
-
   } else if (vista === 'manana') {
     const { key, fecha } = obtenerDia(1);
     fechaTexto.textContent = 'Mañana, ' + formatearFecha(fecha);
     contenido.innerHTML = renderDia(menuSemana[key]);
-
   } else if (vista === 'pasado') {
     const { key, fecha } = obtenerDia(2);
     fechaTexto.textContent = 'Pasado mañana, ' + formatearFecha(fecha);
     contenido.innerHTML = renderDia(menuSemana[key]);
-
   } else if (vista === 'semana') {
     fechaTexto.textContent = 'Menú completo de la semana';
     const orden = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo'];
@@ -98,7 +85,6 @@ function mostrarVista(vista) {
     `).join('');
   }
 }
-
 // Conecta los botones de pestañas
 function iniciarTabs() {
   const botones = document.querySelectorAll('.tab-btn');
@@ -110,7 +96,6 @@ function iniciarTabs() {
     });
   });
 }
-
 document.addEventListener('DOMContentLoaded', () => {
   iniciarTabs();
   cargarMenu();
