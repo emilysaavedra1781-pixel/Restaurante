@@ -1,0 +1,19 @@
+// =========================================================
+// STYLE.LESS — archivo maestro
+// Solo importa los demás archivos .less en orden. Este es el
+// único archivo que el <link> del HTML necesita apuntar; less.js
+// se encarga de ir a buscar cada @import y unir todo en un solo
+// CSS final antes de pintarlo en pantalla.
+// =========================================================
+
+@import "less/base/variables.less"; // colores, fuentes, medidas
+@import "less/base/mixins.less";    // bloques de estilo reutilizables
+
+@import "less/base/base.less";      // reset, tipografía, botones
+@import "less/layout/header.less";  // navbar
+@import "less/components/hero.less";      // hero del home + mini-hero de páginas internas
+@import "less/components/nosotros.less"; // sección/página "Nosotros"
+@import "less/components/menu.less";     // tarjetas, pestañas y filtro de menú
+@import "less/components/forms.less";    // formularios, modal, accordion
+@import "less/layout/footer.less";  // cta-banner + footer
+@import "less/layout/responsive.less"; // media queries

@@ -1,0 +1,19 @@
+// =========================================================
+// RESPONSIVE.LESS
+// Media queries generales. Los componentes de Bootstrap
+// (navbar, grid, modal) ya son responsivos por su cuenta;
+// esto ajusta las secciones hechas a mano.
+// =========================================================
+
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; padding: 3rem 1.5rem 5rem; }
+  .hero-image { order: -1; }
+  .nosotros-inner { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .cta-inner { flex-direction: column; align-items: flex-start; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .form-card { padding: 1.6rem; }
+}

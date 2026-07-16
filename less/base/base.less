@@ -1,0 +1,126 @@
+// =========================================================
+// BASE.LESS
+// Reset ligero, tipografía general, contenedor y botones base.
+// Esto se carga DESPUÉS de Bootstrap, así que lo de aquí
+// tiene prioridad y "pinta" el sitio con la identidad del
+// restaurante encima del esqueleto que ya trae Bootstrap.
+// =========================================================
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: @font-body;
+  color: @ink;
+  background: @cream;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: @font-heading;
+  margin: 0;
+  line-height: 1.15;
+}
+
+p { margin: 0; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  .transition(color);
+}
+
+img { max-width: 100%; display: block; }
+
+.container {
+  max-width: @container-width;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+:focus-visible {
+  outline: 2px solid @terracota;
+  outline-offset: 3px;
+}
+
+.eyebrow {
+  display: inline-block;
+  color: @dorado;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+
+  &.eyebrow-dark { color: @terracota; }
+}
+
+// Título con línea decorativa debajo (se reutiliza en varias páginas)
+.page-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+
+  h1 {
+    font-size: clamp(1.9rem, 4vw, 2.6rem);
+    margin-bottom: 0.6rem;
+  }
+
+  p {
+    color: @ink-soft;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+}
+
+// ===================== BOTONES =====================
+// Nota: usamos nuestras propias clases .btn-orange / .btn-green / .btn-outline
+// junto a la clase ".btn" de Bootstrap. Bootstrap nos da el padding/radius
+// base y estas clases le cambian solo el color.
+.btn {
+  border-radius: 8px;
+  font-family: @font-body;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  border: 2px solid transparent;
+  cursor: pointer;
+  .transition(); // transform, box-shadow, background y color, todo en un solo mixin
+}
+
+.btn-orange {
+  background: @terracota;
+  color: #fff;
+
+  &:hover {
+    background: @terracota-oscuro;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px fade(@terracota, 30%);
+  }
+}
+
+.btn-green {
+  background: @verde;
+  color: #fff;
+
+  &:hover {
+    background: @verde-oscuro;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px fade(@verde, 30%);
+  }
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: @terracota;
+  color: @terracota;
+
+  &:hover {
+    background: @terracota;
+    color: #fff;
+    transform: translateY(-3px);
+  }
+}

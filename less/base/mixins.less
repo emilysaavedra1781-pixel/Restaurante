@@ -1,0 +1,30 @@
+// =========================================================
+// MIXINS.LESS
+// Un mixin es una "función de estilos": un bloque de CSS
+// reutilizable que se inyecta con .nombre-del-mixin();
+// Evita copiar y pegar la misma transición o sombra 30 veces.
+// =========================================================
+
+// Transición reutilizable. Uso: .transition(); o .transition(color);
+.transition(@props: all, @dur: @transition-base) {
+  transition: @props @dur ease;
+}
+
+// Sombra de tarjeta reutilizable (cards del menú, formularios, etc.)
+.card-shadow(@opacity: 0.08) {
+  box-shadow: 0 8px 22px fade(@ink, @opacity * 100%);
+}
+
+// Efecto "levantar" al pasar el mouse: se usa en botones y tarjetas.
+.hover-lift() {
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+// Centrar contenido con flexbox (se repite en íconos redondos, etc.)
+.flex-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

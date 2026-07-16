@@ -1,0 +1,94 @@
+// =========================================================
+// HEADER.LESS
+// El <header> usa el componente "navbar" de Bootstrap para el
+// menú responsive (navbar-toggler + collapse). Aquí solo le
+// cambiamos los colores/tipografía para que combine con la
+// identidad del restaurante.
+// =========================================================
+
+header {
+  background: @cream;
+  border-bottom: 1px solid fade(@ink, 8%);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.navbar {
+  padding: 1rem 0;
+
+  .container { display: flex; align-items: center; }
+}
+
+// Logo (usa navbar-brand de Bootstrap + nuestra clase .logo)
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 0;
+
+  .logo-leaf { color: @terracota; font-size: 1.5rem; }
+
+  span {
+    display: block;
+    font-family: @font-heading;
+    font-weight: 800;
+    font-size: 1.3rem;
+    letter-spacing: 0.03em;
+    color: @ink;
+  }
+
+  small {
+    display: block;
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    color: @ink-soft;
+  }
+}
+
+// Enlaces de navegación (dentro del navbar-collapse de Bootstrap)
+.navbar-nav {
+  gap: 1.6rem;
+
+  .nav-link {
+    font-family: @font-body;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    color: @ink-soft;
+    padding: 0.3rem 0;
+    position: relative;
+    .transition(color);
+
+    &:hover { color: @terracota; }
+
+    &.active {
+      color: @terracota;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0; bottom: 0;
+        width: 100%; height: 2px;
+        background: @terracota;
+      }
+    }
+  }
+}
+
+.navbar-toggler {
+  border-color: fade(@ink, 15%);
+
+  &:focus { box-shadow: 0 0 0 3px fade(@terracota, 25%); }
+}
+
+@media (max-width: 767.98px) {
+  .navbar-collapse {
+    padding: 1.2rem 0;
+    text-align: center;
+  }
+  .navbar-nav {
+    margin-bottom: 1rem;
+    align-items: center;
+  }
+}

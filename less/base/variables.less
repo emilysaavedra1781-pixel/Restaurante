@@ -1,0 +1,36 @@
+// =========================================================
+// VARIABLES.LESS
+// Aquí viven todos los "valores mágicos" del sitio: colores,
+// tipografías, espaciados y duraciones de transición.
+// Cambiar un color aquí lo cambia en TODO el sitio.
+// =========================================================
+
+// --- Paleta de colores ---
+@cream:      #f7f2ea;
+@cream-soft: #efe6d6;
+@ink:        #2b2117;
+@terracota:  #c0622f;
+@verde:      #4c6b4a;
+@oscuro:     #221a13;
+@oscuro-2:   #2c2117;
+@dorado:     #e3b273;
+
+// Colores derivados con funciones LESS (darken/lighten/fade)
+// en vez de escribir un rgba() o un hex nuevo a mano.
+@terracota-oscuro: darken(@terracota, 8%);
+@verde-oscuro:      darken(@verde, 8%);
+@ink-soft:           fade(@ink, 72%);
+@crema-oscura:       fade(@cream, 85%);
+
+// --- Tipografía ---
+@font-heading: 'Playfair Display', serif;
+@font-body: 'Poppins', sans-serif;
+
+// --- Layout ---
+@radius: 10px;
+@radius-lg: 18px;
+@container-width: 1180px;
+
+// --- Transiciones (usadas por el mixin .transition en mixins.less) ---
+@transition-fast: 0.2s;
+@transition-base: 0.25s;

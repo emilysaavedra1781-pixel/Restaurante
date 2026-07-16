@@ -1,0 +1,108 @@
+{
+  "restaurante": "Saboré",
+  "telefono_whatsapp": "51987654321",
+  "categorias": [
+    {
+      "id": "entradas",
+      "nombre": "Entradas",
+      "platos": [
+        {
+          "nombre": "Ceviche Clásico",
+          "descripcion": "Pescado fresco marinado en limón, ají limo, cebolla morada y camote.",
+          "precio": 38,
+          "imagen": "imagenes/ceviche.jpg"
+        },
+        {
+          "nombre": "Causa Limeña",
+          "descripcion": "Papa amarilla sazonada con ají amarillo, rellena de pollo y palta.",
+          "precio": 22,
+          "imagen": "imagenes/causa-limena.jpg"
+        },
+        {
+          "nombre": "Papa a la Huancaína",
+          "descripcion": "Papas cocidas bañadas en cremosa salsa de ají amarillo y queso fresco.",
+          "precio": 16,
+          "imagen": "imagenes/papa-huancaina.jpg"
+        }
+      ]
+    },
+    {
+      "id": "fondos",
+      "nombre": "Fondos",
+      "platos": [
+        {
+          "nombre": "Lomo Saltado",
+          "descripcion": "Trozos de res salteados con cebolla, tomate y papas fritas, al estilo criollo.",
+          "precio": 42,
+          "imagen": "imagenes/lomo-saltado.jpg"
+        },
+        {
+          "nombre": "Ají de Gallina",
+          "descripcion": "Pechuga deshilachada en cremosa salsa de ají amarillo, servida con arroz y aceituna.",
+          "precio": 32,
+          "imagen": "imagenes/aji-gallina.jpg"
+        },
+        {
+          "nombre": "Arroz con Pollo",
+          "descripcion": "Arroz verde al cilantro con presa de pollo y papa a la huancaína.",
+          "precio": 28,
+          "imagen": "imagenes/arroz-pollo.jpg"
+        },
+        {
+          "nombre": "Seco de Res con Frejoles",
+          "descripcion": "Guiso de res en salsa de culantro, acompañado de frejoles y arroz.",
+          "precio": 30,
+          "imagen": "imagenes/seco-res.jpg"
+        }
+      ]
+    },
+    {
+      "id": "bebidas",
+      "nombre": "Bebidas",
+      "platos": [
+        {
+          "nombre": "Chicha Morada",
+          "descripcion": "Bebida tradicional de maíz morado con piña, canela y clavo de olor.",
+          "precio": 8,
+          "imagen": "imagenes/chicha-morada.webp"
+        },
+        {
+          "nombre": "Jugo de Maracuyá",
+          "descripcion": "Refrescante jugo natural de maracuyá recién exprimido.",
+          "precio": 9,
+          "imagen": "imagenes/jugo-maracuya.jpg"
+        },
+        {
+          "nombre": "Limonada Frozen",
+          "descripcion": "Limonada helada batida, endulzada al gusto.",
+          "precio": 10,
+          "imagen": "imagenes/limonada-frozen.jpg"
+        }
+      ]
+    },
+    {
+      "id": "postres",
+      "nombre": "Postres",
+      "platos": [
+        {
+          "nombre": "Suspiro a la Limeña",
+          "descripcion": "Manjar blanco cubierto con merengue al oporto y un toque de canela.",
+          "precio": 18,
+          "imagen": "imagenes/suspiro.jpg"
+        },
+        {
+          "nombre": "Arroz con Leche",
+          "descripcion": "Clásico postre cremoso de arroz con leche y canela.",
+          "precio": 14,
+          "imagen": "imagenes/arroz-leche.jpg"
+        },
+        {
+          "nombre": "Mazamorra Morada",
+          "descripcion": "Dulce de maíz morado con frutas y un toque de canela.",
+          "precio": 14,
+          "imagen": "imagenes/mazamorra-morada.webp"
+        }
+      ]
+    }
+  ]
+}

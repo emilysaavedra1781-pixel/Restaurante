@@ -1,0 +1,93 @@
+// =========================================================
+// FOOTER.LESS
+// Banner de "Reserva tu mesa" (cta-banner) + pie de página,
+// iguales en las 5 páginas del sitio.
+// =========================================================
+
+.cta-banner { background: @oscuro; color: @cream; padding: 3.2rem 0; }
+
+.cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+}
+
+.cta-left { display: flex; align-items: center; gap: 1.3rem; }
+
+.cta-icon {
+  flex-shrink: 0;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: fade(@dorado, 15%);
+  color: @dorado;
+  font-size: 1.3rem;
+  .flex-center();
+}
+
+.cta-banner {
+  h3 { color: @cream; font-size: 1.4rem; margin: 0.2rem 0 0.3rem; }
+  p { color: @crema-oscura; font-size: 0.92rem; }
+}
+
+footer {
+  background: @oscuro-2;
+  color: @crema-oscura;
+  padding: 4rem 0 0;
+
+  .logo {
+    span { color: @cream; }
+    small { color: @crema-oscura; }
+    .logo-leaf { color: @dorado; }
+  }
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+.footer-brand p { margin: 1rem 0 1.2rem; font-size: 0.9rem; max-width: 300px; }
+
+.socials {
+  display: flex;
+  gap: 0.7rem;
+
+  a {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: fade(@cream, 10%);
+    .flex-center();
+    .transition(background, @transition-fast);
+
+    &:hover { background: @terracota; transform: translateY(-3px); }
+  }
+}
+
+.footer-col {
+  h4 {
+    font-family: @font-heading;
+    color: @dorado;
+    font-size: 1rem;
+    margin-bottom: 1.1rem;
+    letter-spacing: 0.02em;
+  }
+
+  ul { list-style: none; margin: 0; padding: 0; }
+  li { margin-bottom: 0.6rem; }
+  a { font-size: 0.88rem; .transition(color, @transition-fast); }
+  a:hover { color: @terracota; }
+  p { font-size: 0.88rem; margin-bottom: 0.4rem; }
+  i { color: @dorado; margin-right: 0.4rem; }
+}
+
+.footer-bottom {
+  border-top: 1px solid fade(@cream, 12%);
+  text-align: center;
+  padding: 1.3rem 0;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
