@@ -55,7 +55,10 @@ const IMAGENES_PLATOS = {
   'Arroz con leche': 'imagenes/arroz-leche.jpg',
   'Mazamorra morada': 'imagenes/mazamorra-morada.webp',
   'Chicha morada': 'imagenes/chicha-morada.webp',
-  'Jugo de maracuyá': 'imagenes/jugo-maracuya.jpg'
+  'Jugo de maracuyá': 'imagenes/jugo-maracuya.jpg',
+  'Ensalada rusa': 'imagenes/ensalada-rusa.jpg',
+  'Tallarines verdes con bistec': 'imagenes/tallarines-bistec.jpg',
+  'Jugo de papaya': 'imagenes/jugo-papaya.jpg'
 };
 
 function crearCardDia(tag, titulo) {
